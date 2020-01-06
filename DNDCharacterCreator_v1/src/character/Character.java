@@ -17,16 +17,19 @@ public class Character {
 	private String playerName;
 	private String Race;
 	private String Alignment;
-	private int charLevel;
+	private int level;
 	private int expPoints;
 	private int inspiration;
 	private int profBonus;
-	private int strength;
+	private int str;
 	private int dex;
 	private int con;
 	private int intel;
 	private int wis;
-	private int charisma;
+	private int ch;
+	
+	
+	//TODO: MAKE SETTERS FOR THE REMAINDER AND MAKE GETTERS AS WELL
 	
 	/**
 	 * 
@@ -37,6 +40,45 @@ public class Character {
 	public Character(String playerName, String charName) {
 		setPlayerName(playerName);
 		setCharName(charName);
+		setLevel(level); //This may need to alter the proficiency bonus
+		setInitialAbilityScores();
+		
+	}
+	private void setInitialAbilityScores() {
+		setStr(str);
+		setDex(dex);
+		setCon(con);
+		setInt(intel);
+		setWis(wis);
+		setChar(ch);
+		
+	}
+	private void setChar(int ch) {
+		this.ch = ch;
+		
+	}
+	private void setWis(int wis) {
+		this.wis = wis;
+		
+	}
+	private void setInt(int intel) {
+		this.intel = intel;
+		
+	}
+	private void setCon(int con) {
+		this.con = con;
+		
+	}
+	private void setDex(int dex) {
+		this.dex = dex;
+		
+	}
+	private void setStr(int str) {
+		this.str = str;
+		
+	}
+	private void setLevel(int level) {
+		this.level = level;		
 	}
 	public void setPlayerName(String player) {
 		this.playerName = player;
